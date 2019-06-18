@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Realtime Pizza Order Tracker - Laravel, Vue & Pusher
+🍕🍕🍕
 
-You can use the [editor on GitHub](https://github.com/mavericksthinker/laradocs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. clone the repo and cd into it
+1. `composer install`
+1. rename or copy `.env.example` file to `.env`
+1. Enter your database credentials in your `.env` file
+1. Change `BROADCAST_DRIVER` to `pusher` in your `.env` file
+1. Enter your Pusher credentials in your `.env` file. If needed, change cluster in `config/broadcasting.php`
+1. `php artisan migrate`
+1. `php artisan key:generate`
+1. Enter your Pusher key in `resources/assets/js/bootstrap.js`. If needed, change cluster as well
+1. `npm install`
+1. `npm run dev`
+1. `php artisan serve` or use Laravel Valet
+1. Visit localhost:8000 in your browser
+1. Make a new user and a new pizza order. Open up another window, go to admin, change order status, and watch it update in realtime!
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mavericksthinker/laradocs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
